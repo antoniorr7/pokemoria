@@ -1,0 +1,57 @@
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+.card img {
+    display: none;
+    transform: rotateY(180deg);
+}
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card.flipped  {
+    transform: rotateY(180deg);
+
+}
+.card.flipped img {
+   
+    display: block;
+}
+#pairs-bar {
+    display: flex;
+    overflow-x: auto; /* Añadir una barra de desplazamiento horizontal si es necesario */
+    margin-top: 20px;
+}
+
+.pair {
+    margin: 0 10px;
+}
+
+.pair img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.pair.found img {
+    border-color: green; /* Cambia el color del borde para las parejas encontradas */
+}
