@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const response = await fetch(apiUrl);
         const data = await response.json();
         return data.results;
+       
     }
 
     // Función para mezclar aleatoriamente un array
